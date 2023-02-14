@@ -40,7 +40,7 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true #打开这个配置是为了在生成文章的时候生成一个同名的资源目录用于存放图片文件。
 relative_link: false
 future: true
 highlight:
