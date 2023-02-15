@@ -16,17 +16,19 @@
   <meta name="author" content="wumichalou">
   <meta name="keywords" content="">
   
-    <meta name="description" content="一、域名部署1.生成托管地址 使用用户名新建一个以.github.io结尾的仓库   查看生成的域名（当然这个时候仓库里没有东西应该访问不到）   2.连接仓库并推送代码 首次推送  1234567891011# 注意切换到科学上网的端口git initgit remote add origin + 地址git add .git commit -m &quot;first commit&quot;">
+    <meta name="description" content="一、域名部署1.生成托管地址 使用用户名新建一个以.github.io结尾的仓库   查看生成的域名（当然这个时候仓库里没有东西应该访问不到）   2.连接仓库并推送代码 首次推送  12345678910111213# 注意切换到科学上网的端口git initgit remote add origin + 地址git add .git commit -m &quot;first commit&amp;q">
 <meta property="og:type" content="article">
-<meta property="og:title" content="从0到1全流程">
+<meta property="og:title" content="建站——从0到1全流程">
 <meta property="og:url" content="http://example.com/2023/02/14/%E4%BB%8E0%E5%88%B01%E5%85%A8%E6%B5%81%E7%A8%8B/index.html">
 <meta property="og:site_name" content="yby2020">
-<meta property="og:description" content="一、域名部署1.生成托管地址 使用用户名新建一个以.github.io结尾的仓库   查看生成的域名（当然这个时候仓库里没有东西应该访问不到）   2.连接仓库并推送代码 首次推送  1234567891011# 注意切换到科学上网的端口git initgit remote add origin + 地址git add .git commit -m &quot;first commit&quot;">
+<meta property="og:description" content="一、域名部署1.生成托管地址 使用用户名新建一个以.github.io结尾的仓库   查看生成的域名（当然这个时候仓库里没有东西应该访问不到）   2.连接仓库并推送代码 首次推送  12345678910111213# 注意切换到科学上网的端口git initgit remote add origin + 地址git add .git commit -m &quot;first commit&amp;q">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/2023/02/14/%E4%BB%8E0%E5%88%B01%E5%85%A8%E6%B5%81%E7%A8%8B/1.png">
 <meta property="og:image" content="http://example.com/2023/02/14/%E4%BB%8E0%E5%88%B01%E5%85%A8%E6%B5%81%E7%A8%8B/2.png">
+<meta property="og:image" content="http://example.com/2023/02/14/%E4%BB%8E0%E5%88%B01%E5%85%A8%E6%B5%81%E7%A8%8B/4.png">
+<meta property="og:image" content="http://example.com/2023/02/14/%E4%BB%8E0%E5%88%B01%E5%85%A8%E6%B5%81%E7%A8%8B/3.png">
 <meta property="article:published_time" content="2023-02-14T09:34:37.000Z">
-<meta property="article:modified_time" content="2023-02-15T02:22:35.581Z">
+<meta property="article:modified_time" content="2023-02-15T06:20:43.107Z">
 <meta property="article:author" content="wumichalou">
 <meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary_large_image">
@@ -34,7 +36,7 @@
   
   
   
-  <title>从0到1全流程 - yby2020</title>
+  <title>建站——从0到1全流程 - yby2020</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -204,7 +206,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="从0到1全流程"></span>
+            <span id="subtitle" data-typed-text="建站——从0到1全流程"></span>
           
         </div>
 
@@ -227,7 +229,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          364 字
+          2.6k 字
         
       </span>
     
@@ -238,7 +240,7 @@
         
         
         
-          4 分钟
+          22 分钟
         
       </span>
     
@@ -289,7 +291,7 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">从0到1全流程</h1>
+            <h1 style="display: none">建站——从0到1全流程</h1>
             
             
               <div class="markdown-body">
@@ -304,20 +306,100 @@
 <h4 id="2-连接仓库并推送代码"><a href="#2-连接仓库并推送代码" class="headerlink" title="2.连接仓库并推送代码"></a>2.连接仓库并推送代码</h4><ul>
 <li>首次推送</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 注意切换到科学上网的端口</span><br><br>git init<br><br>git remote add origin + 地址<br><br>git add .<br><br>git commit -m <span class="hljs-string">&quot;first commit&quot;</span><br><br>git push -u origin main   <span class="hljs-comment">#注意这里是main不是master</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 注意切换到科学上网的端口</span><br><br>git init<br><br>git remote add origin + 地址<br><br>git add .<br><br>git commit -m <span class="hljs-string">&quot;first commit&quot;</span><br><br>git push -u origin main   <span class="hljs-comment">#注意github默认是main不是master</span><br><br>hexo g -d   <span class="hljs-comment">#一键部署</span><br></code></pre></td></tr></table></figure>
 
 <ul>
 <li>之后的提交</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 注意切换到科学上网的端口</span><br><br>git fetch<br><br>git pull origin main --allow-unrelated-histories（让git允许提交不关联的历史代码。）<br><br>git add .<br><br>git commit - <span class="hljs-string">&quot;提交说明&quot;</span><br><br>git push<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 注意切换到科学上网的端口</span><br><br>git fetch<br><br>git pull origin main --allow-unrelated-histories（允许提交不关联的历史代码。）<br><br>git add .<br><br>git commit - <span class="hljs-string">&quot;提交说明&quot;</span><br><br>git push<br><br>hexo g -d   <span class="hljs-comment">#一键部署</span><br></code></pre></td></tr></table></figure>
 
-<h3 id="二、hexo-配置"><a href="#二、hexo-配置" class="headerlink" title="二、hexo 配置"></a>二、hexo 配置</h3>
+<h3 id="二、hexo-搭建项目"><a href="#二、hexo-搭建项目" class="headerlink" title="二、hexo 搭建项目"></a>二、hexo 搭建项目</h3><ul>
+<li>在指定的目录下打开 cmd</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install -g hexo-cli<br><br>hexo init yby2020 <span class="hljs-comment">#这里可以自定义名字</span><br><br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>vscode 打开项目</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 安装依赖</span><br>yarn<br><br><span class="hljs-comment">#启动项目</span><br>hexo g<br>hexo server<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>切换 fluid 博客主题（详见官方文档：<a target="_blank" rel="noopener" href="https://github.com/fluid-dev/hexo-theme-fluid">hexo-theme-fluid</a>）</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash">yarn add hexo-theme-fluid<br><br><span class="hljs-comment">#如下修改 Hexo 博客目录中的 _config.yml</span><br>theme: fluid  <span class="hljs-comment"># 指定主题</span><br>language: zh-CN  <span class="hljs-comment"># 指定语言，会影响主题显示的语言，按需修改</span><br><br>npm update --save hexo-theme-fluid <span class="hljs-comment"># 最后更新主题</span><br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>自动部署配置</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash">yarn add hexo-deployer-git<br><br>修改根目录下的 _config.yml，配置 GitHub 相关信息<br>deploy:<br>  <span class="hljs-built_in">type</span>: git<br>  repo: https://github.com/YBY2020/YBY2020.github.io.git<br>  branch: main<br>  token: ***<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>github token 获取</li>
+</ul>
+<p><img src="4.png" srcset="/img/loading.gif" lazyload alt="4"></p>
+<h3 id="三、hexo-配置"><a href="#三、hexo-配置" class="headerlink" title="三、hexo 配置"></a>三、hexo 配置</h3><ul>
+<li><p>官方文档：<a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs/guide/#%E5%85%B3%E4%BA%8E%E6%8C%87%E5%8D%97">Hexo Fluid 用户手册</a></p>
+</li>
+<li><p>官方示例：<a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/">Hexo Theme Fluid</a></p>
+</li>
+<li><p>仅介绍具有代表性的配置</p>
+</li>
+</ul>
+<h4 id="1-mac-风格代码块"><a href="#1-mac-风格代码块" class="headerlink" title="1.mac 风格代码块"></a>1.mac 风格代码块</h4><ul>
+<li><p>在 source 文件夹下新建<code>/source/css/fluid-extension.css</code>（此处可添加任何覆盖样式）</p>
+<p><img src="3.png" srcset="/img/loading.gif" lazyload alt="3"></p>
+</li>
+<li><p>打开主题的配置文件<code>_config.fluid.yml</code>，在 <code>custom_css</code> 里添加刚才的文件。</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">custom_css: <span class="hljs-string">&quot;/css/fluid-extension.css&quot;</span><br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>mac 风格代码块</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-comment">/* 控制代码框顶栏颜色、宽度、圆角等 */</span><br><span class="hljs-selector-tag">figure</span><span class="hljs-selector-class">.highlight</span> &#123;<br>  <span class="hljs-attribute">background</span>: <span class="hljs-built_in">rgb</span>(<span class="hljs-number">246</span>, <span class="hljs-number">248</span>, <span class="hljs-number">250</span>);<br>  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">8px</span>;<br>  <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">1px</span> <span class="hljs-number">1px</span> <span class="hljs-number">4px</span> -<span class="hljs-number">1px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.3</span>);<br>  <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">25px</span>;<br>  <span class="hljs-attribute">z-index</span>: <span class="hljs-number">998</span>;<br>&#125;<br><br><span class="hljs-comment">/* 绘制三个小圆点 */</span><br><span class="hljs-selector-tag">figure</span><span class="hljs-selector-class">.highlight</span><span class="hljs-selector-pseudo">::before</span> &#123;<br>  <span class="hljs-attribute">background</span>: <span class="hljs-number">#fc625d</span>;<br>  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">50%</span>;<br>  <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">20px</span> <span class="hljs-number">0</span> <span class="hljs-number">#fdbc40</span>, <span class="hljs-number">40px</span> <span class="hljs-number">0</span> <span class="hljs-number">#35cd4b</span>;<br>  <span class="hljs-attribute">content</span>: <span class="hljs-string">&quot; &quot;</span>;<br>  <span class="hljs-attribute">height</span>: <span class="hljs-number">12px</span>;<br>  <span class="hljs-attribute">left</span>: <span class="hljs-number">12px</span>;<br>  <span class="hljs-attribute">margin-top</span>: -<span class="hljs-number">15px</span>;<br>  <span class="hljs-attribute">position</span>: absolute;<br>  <span class="hljs-attribute">width</span>: <span class="hljs-number">12px</span>;<br>  <span class="hljs-attribute">z-index</span>: <span class="hljs-number">999</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h4 id="2-代码时效性提醒"><a href="#2-代码时效性提醒" class="headerlink" title="2.代码时效性提醒"></a>2.代码时效性提醒</h4><ul>
+<li>在 source 文件夹下新建<code>/source/js/date.js</code>（js 目录下集中存放注入代码，并统一引入）</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs js">(<span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-keyword">var</span> times = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementsByTagName</span>(<span class="hljs-string">&quot;time&quot;</span>);<br>  <span class="hljs-keyword">if</span> (times.<span class="hljs-property">length</span> === <span class="hljs-number">0</span>) &#123;<br>    <span class="hljs-keyword">return</span>;<br>  &#125;<br>  <span class="hljs-keyword">var</span> posts = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementsByClassName</span>(<span class="hljs-string">&quot;post-content&quot;</span>);<br>  <span class="hljs-keyword">if</span> (posts.<span class="hljs-property">length</span> === <span class="hljs-number">0</span>) &#123;<br>    <span class="hljs-keyword">return</span>;<br>  &#125;<br><br>  <span class="hljs-keyword">var</span> pubTime = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>(times[<span class="hljs-number">0</span>].<span class="hljs-property">dateTime</span>); <span class="hljs-comment">/* 文章发布时间戳 */</span><br>  <span class="hljs-keyword">var</span> now = <span class="hljs-title class_">Date</span>.<span class="hljs-title function_">now</span>(); <span class="hljs-comment">/* 当前时间戳 */</span><br>  <span class="hljs-keyword">var</span> interval = <span class="hljs-built_in">parseInt</span>(now - pubTime);<br>  <span class="hljs-comment">/* 发布时间超过指定时间（毫秒）才会显示 */</span><br>  <span class="hljs-keyword">if</span> (interval &gt; <span class="hljs-number">3600</span> * <span class="hljs-number">24</span> * <span class="hljs-number">30</span> * <span class="hljs-number">1000</span>) &#123;<br>    <span class="hljs-keyword">var</span> days = <span class="hljs-built_in">parseInt</span>(interval / <span class="hljs-number">86400000</span>);<br>    posts[<span class="hljs-number">0</span>].<span class="hljs-title function_">insertAdjacentHTML</span>(<br>      <span class="hljs-string">&quot;afterbegin&quot;</span>,<br>      <span class="hljs-string">&#x27;&lt;div class=&quot;note note-warning&quot; style=&quot;font-size:0.9rem&quot;&gt;&lt;p&gt;&#x27;</span> +<br>        <span class="hljs-string">&#x27;&lt;div class=&quot;h6&quot;&gt;文章时效性提示&lt;/div&gt;&lt;p&gt;这是一篇发布于 &#x27;</span> +<br>        days +<br>        <span class="hljs-string">&quot; 天前的文章，部分信息可能已发生改变，请注意甄别。&quot;</span> +<br>        <span class="hljs-string">&quot;&lt;/p&gt;&lt;/p&gt;&lt;/div&gt;&quot;</span><br>    );<br>  &#125;<br>&#125;)();<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>在根目录下新建 scripts 文件夹，并新建一个 index.js 文件，注入 js 代码</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs js">hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<br>  <span class="hljs-string">&quot;body_end&quot;</span>,<br>  <span class="hljs-string">`</span><br><span class="hljs-string">  &lt;script src=&quot;/js/date.js&quot;&gt;&lt;/script&gt;</span><br><span class="hljs-string">`</span><br>);<br></code></pre></td></tr></table></figure>
+
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><blockquote>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/yaorongke/article/details/119089190">GitHub Pages + Hexo 搭建个人博客网站，史上最全教程</a></p>
+</blockquote>
+
                 
               </div>
             
             <hr/>
             <div>
               <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%B7%A5%E5%85%B7/" class="category-chain-item">工具</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
   
   
     <div class="post-meta">
