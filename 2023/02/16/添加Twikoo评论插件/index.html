@@ -16,21 +16,29 @@
   <meta name="author" content="wumichalou">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+    <meta name="description" content="前言添加评论模块不仅仅是添加一个组件那么简单，简言之就是涉及到与后端的交互，当然如今的网站评论系统已经做得非常成熟了，搭配一台云服务器，即可自动生成。 通过对比不同的评论系统，发现 twikoo 支持自动拉取 QQ 头像、图文评论、点赞回复、匿名评论等等功能，样式上也简单美观，所以本站选用 twikoo  Twikoo 文档  腾讯云部署1.进入活动专区 腾讯云 或 云开发 CloudBase">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2023/02/14/hello-world/index.html">
+<meta property="og:title" content="添加Twikoo评论插件">
+<meta property="og:url" content="http://example.com/2023/02/16/%E6%B7%BB%E5%8A%A0Twikoo%E8%AF%84%E8%AE%BA%E6%8F%92%E4%BB%B6/index.html">
 <meta property="og:site_name" content="yby2020">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="前言添加评论模块不仅仅是添加一个组件那么简单，简言之就是涉及到与后端的交互，当然如今的网站评论系统已经做得非常成熟了，搭配一台云服务器，即可自动生成。 通过对比不同的评论系统，发现 twikoo 支持自动拉取 QQ 头像、图文评论、点赞回复、匿名评论等等功能，样式上也简单美观，所以本站选用 twikoo  Twikoo 文档  腾讯云部署1.进入活动专区 腾讯云 或 云开发 CloudBase">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-02-14T01:39:12.558Z">
-<meta property="article:modified_time" content="2023-02-14T09:37:07.477Z">
+<meta property="og:image" content="http://example.com/2023/02/16/%E6%B7%BB%E5%8A%A0Twikoo%E8%AF%84%E8%AE%BA%E6%8F%92%E4%BB%B6/1.png">
+<meta property="og:image" content="http://example.com/2023/02/16/%E6%B7%BB%E5%8A%A0Twikoo%E8%AF%84%E8%AE%BA%E6%8F%92%E4%BB%B6/2.png">
+<meta property="og:image" content="http://example.com/2023/02/16/%E6%B7%BB%E5%8A%A0Twikoo%E8%AF%84%E8%AE%BA%E6%8F%92%E4%BB%B6/4.png">
+<meta property="og:image" content="http://example.com/2023/02/16/%E6%B7%BB%E5%8A%A0Twikoo%E8%AF%84%E8%AE%BA%E6%8F%92%E4%BB%B6/3.png">
+<meta property="og:image" content="http://example.com/2023/02/16/%E6%B7%BB%E5%8A%A0Twikoo%E8%AF%84%E8%AE%BA%E6%8F%92%E4%BB%B6/5.png">
+<meta property="og:image" content="http://example.com/2023/02/16/%E6%B7%BB%E5%8A%A0Twikoo%E8%AF%84%E8%AE%BA%E6%8F%92%E4%BB%B6/6.png">
+<meta property="article:published_time" content="2023-02-16T06:10:07.000Z">
+<meta property="article:modified_time" content="2023-02-16T07:26:33.781Z">
 <meta property="article:author" content="wumichalou">
+<meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/2023/02/16/%E6%B7%BB%E5%8A%A0Twikoo%E8%AF%84%E8%AE%BA%E6%8F%92%E4%BB%B6/1.png">
   
   
   
-  <title>Hello World - yby2020</title>
+  <title>添加Twikoo评论插件 - yby2020</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -200,7 +208,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Hello World"></span>
+            <span id="subtitle" data-typed-text="添加Twikoo评论插件"></span>
           
         </div>
 
@@ -211,8 +219,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-02-14 09:39" pubdate>
-          2023年2月14日 上午
+        <time datetime="2023-02-16 14:10" pubdate>
+          2023年2月16日 下午
         </time>
       </span>
     
@@ -223,7 +231,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          363 字
+          1.5k 字
         
       </span>
     
@@ -234,7 +242,7 @@
         
         
         
-          4 分钟
+          13 分钟
         
       </span>
     
@@ -285,24 +293,61 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Hello World</h1>
+            <h1 style="display: none">添加Twikoo评论插件</h1>
             
             
               <div class="markdown-body">
                 
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
+                <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>添加评论模块不仅仅是添加一个组件那么简单，简言之就是涉及到与后端的交互，当然如今的网站评论系统已经做得非常成熟了，搭配一台云服务器，即可自动生成。</p>
+<p>通过对比不同的评论系统，发现 twikoo 支持自动拉取 QQ 头像、图文评论、点赞回复、匿名评论等等功能，样式上也简单美观，所以本站选用 twikoo</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://twikoo.js.org/">Twikoo 文档</a></li>
+</ul>
+<h3 id="腾讯云部署"><a href="#腾讯云部署" class="headerlink" title="腾讯云部署"></a>腾讯云部署</h3><h4 id="1-进入活动专区"><a href="#1-进入活动专区" class="headerlink" title="1.进入活动专区"></a>1.进入活动专区</h4><ul>
+<li><a target="_blank" rel="noopener" href="https://cloud.tencent.com/act">腾讯云</a> 或 <a target="_blank" rel="noopener" href="https://cloud.tencent.com/act/free">云开发 CloudBase</a></li>
+</ul>
+<p><img src="1.png" srcset="/img/loading.gif" lazyload alt="1"></p>
+<h4 id="2-选择云开发"><a href="#2-选择云开发" class="headerlink" title="2.选择云开发"></a>2.选择云开发</h4><p><img src="2.png" srcset="/img/loading.gif" lazyload alt="2"></p>
+<h4 id="3-进入云开发控制台"><a href="#3-进入云开发控制台" class="headerlink" title="3.进入云开发控制台"></a>3.进入云开发控制台</h4><p><img src="4.png" srcset="/img/loading.gif" lazyload alt="4"></p>
+<h4 id="4-新建环境"><a href="#4-新建环境" class="headerlink" title="4.新建环境"></a>4.新建环境</h4><ul>
+<li><p>地域最好选择上海，如果选择广州的话，需要在<code>twikoo.init()</code>时额外指定环境 <code>region: &quot;ap-guangzhou&quot;</code></p>
+</li>
+<li><p>环境名称无所谓，符合要求即可</p>
+<p><img src="3.png" srcset="/img/loading.gif" lazyload alt="3"></p>
+</li>
+</ul>
+<h4 id="5-环境初始化"><a href="#5-环境初始化" class="headerlink" title="5.环境初始化"></a>5.环境初始化</h4><ul>
+<li><p>进入刚刚创建的环境，选择环境–&gt;登录授权，启用“匿名登录”</p>
+</li>
+<li><p>选择环境–&gt;安全配置，将网站域名添加到“WEB 安全域名”</p>
+<p><img src="5.png" srcset="/img/loading.gif" lazyload alt="5"></p>
+</li>
+<li><p>选择环境–&gt;环境总览，复制环境 ID（用于 fluid 配置）</p>
+</li>
+</ul>
+<h4 id="6-开始手动部署-twikoo"><a href="#6-开始手动部署-twikoo" class="headerlink" title="6.开始手动部署 twikoo"></a>6.开始手动部署 twikoo</h4><ul>
+<li><p><a target="_blank" rel="noopener" href="https://twikoo.js.org/quick-start.html#%E6%89%8B%E5%8A%A8%E9%83%A8%E7%BD%B2">Twikoo 部署文档</a></p>
+</li>
+<li><p>选择基础服务–&gt;云函数，新建云函数，按如图所示配置基础信息</p>
+<p><img src="6.png" srcset="/img/loading.gif" lazyload alt="6"></p>
+<ul>
+<li>下一步，函数配置，将函数代码替换为<code>exports.main = require(&#39;twikoo-func&#39;).main</code></li>
+<li>创建完成后，点击“twikoo”进入云函数详情页，进入“函数代码”标签，点击“文件 - 新建文件”，输入 <code>package.json</code>，回车</li>
+<li>将代码<code>&#123; &quot;dependencies&quot;: &#123; &quot;twikoo-func&quot;: &quot;1.6.10&quot; &#125; &#125;</code>粘贴到代码框中，点击“保存并安装依赖”（注：此处的依赖版本需与官方最新版本保持一致）</li>
+<li>点击测试，将模板替换为请求对象（可保存模板）</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs bash">&#123;<br>  <span class="hljs-string">&quot;event&quot;</span>: <span class="hljs-string">&quot;COMMENT_SUBMIT&quot;</span>,<br>  <span class="hljs-string">&quot;accessToken&quot;</span>: <span class="hljs-string">&quot;b45b2e4c9ec943b884eb4cd9c044c4cd&quot;</span>,<br>  <span class="hljs-string">&quot;nick&quot;</span>: <span class="hljs-string">&quot;云景&quot;</span>,<br>  <span class="hljs-string">&quot;mail&quot;</span>: <span class="hljs-string">&quot;2289350377@qq.com&quot;</span>,<br>  <span class="hljs-string">&quot;link&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,<br>  <span class="hljs-string">&quot;ua&quot;</span>: <span class="hljs-string">&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36&quot;</span>,<br>  <span class="hljs-string">&quot;url&quot;</span>: <span class="hljs-string">&quot;/api.html&quot;</span>,<br>  <span class="hljs-string">&quot;href&quot;</span>: <span class="hljs-string">&quot;https://twikoo.js.org/api.html#example-3&quot;</span>,<br>  <span class="hljs-string">&quot;comment&quot;</span>: <span class="hljs-string">&quot;&lt;p&gt;414&lt;/p&gt;\n&quot;</span><br>  &#125;<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="hexo-fluid-配置"><a href="#hexo-fluid-配置" class="headerlink" title="hexo fluid 配置"></a>hexo fluid 配置</h3><p>打开<code>_config.fluid.yml</code> 文件</p>
+<ul>
+<li>开启评论需要在主题配置中开启并指定评论模块：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">post:<br>  comments:<br>    <span class="hljs-built_in">enable</span>: <span class="hljs-literal">true</span><br>    <span class="hljs-built_in">type</span>: twikoo<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo server<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo generate<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo deploy<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<ul>
+<li>然后在下方设置对应评论模块的参数：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash">twikoo:<br>  <span class="hljs-built_in">enable</span>: <span class="hljs-literal">true</span><br>  visitor: <span class="hljs-literal">true</span><br>  envId: yby-7glx8ltu7f9c49a0<br>  region: ap-shanghai<br>  path: window.location.pathname<br></code></pre></td></tr></table></figure>
 
                 
               </div>
@@ -311,6 +356,34 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%B7%A5%E5%85%B7/" class="category-chain-item">工具</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/hexo/">#hexo</a>
+      
+    </div>
   
 </div>
 
@@ -322,15 +395,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/02/14/%E4%BB%8E0%E5%88%B01%E5%85%A8%E6%B5%81%E7%A8%8B/" title="建站——从0到1全流程">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">建站——从0到1全流程</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2023/02/14/%E4%BB%8E0%E5%88%B01%E5%85%A8%E6%B5%81%E7%A8%8B/" title="建站——从0到1全流程">
+                        <span class="hidden-mobile">建站——从0到1全流程</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
