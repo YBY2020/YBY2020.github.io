@@ -1,10 +1,6 @@
 /* mac代码块样式 */
 figure.highlight {
   /* 控制代码框顶栏颜色、宽度、圆角等 */
-  /*
-      background: #21252b;
-      background: rgb(246,248,250);
-      */
   background: rgb(246, 248, 250);
   border-radius: 8px;
   box-shadow: 1px 1px 4px -1px rgba(0, 0, 0, 0.3);
@@ -32,4 +28,8 @@ figure.highlight::before {
 .markdown-body figure > img,
 .markdown-body figure > a > img {
   box-shadow: 1px 1px 4px -1px rgba(0, 0, 0, 0.3);
+}
+
+.index-img img {
+  box-shadow: 1px 1px 4px -1px rgba(0, 0, 0, 0); //取消首页文章封面阴影
 }
