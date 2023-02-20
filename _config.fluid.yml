@@ -861,6 +861,8 @@ twikoo:
   envId: yby-7glx8ltu7f9c49a0
   region: ap-shanghai
   path: window.location.pathname
+  placeholder: 欢迎纠错！不胜感激~~~
+    小tip：昵称处填入QQ号能自动拉取头像和邮箱喔！
 
 # Cusdis
 # 基于第三方服务或自托管服务

@@ -33,3 +33,10 @@ figure.highlight::before {
 .index-img img {
   box-shadow: 1px 1px 4px -1px rgba(0, 0, 0, 0); //取消首页文章封面阴影
 }
+
+/* 更改标记颜色 */
+
+.mark,
+mark {
+  background-color: rgb(255, 255, 136);
+}

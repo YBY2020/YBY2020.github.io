@@ -24,29 +24,29 @@ categories:
 
 - [腾讯云](https://cloud.tencent.com/act) 或 [云开发 CloudBase](https://cloud.tencent.com/act/free)
 
-![1](1.png)
+  ![ ](1.png)
 
 #### 2.选择云开发
 
-![2](2.png)
+![ ](2.png)
 
 #### 3.进入云开发控制台
 
-![4](4.png)
+![ ](4.png)
 
 #### 4.新建环境
 
 - 地域最好选择上海，如果选择广州的话，需要在`twikoo.init()`时额外指定环境 `region: "ap-guangzhou"`
 - 环境名称无所谓，符合要求即可
 
-  ![3](3.png)
+  ![ ](3.png)
 
 #### 5.环境初始化
 
 - 进入刚刚创建的环境，选择环境-->登录授权，启用“匿名登录”
 - 选择环境-->安全配置，将网站域名添加到“WEB 安全域名”
 
-  ![5](5.png)
+  ![ ](5.png)
 
 - 选择环境-->环境总览，复制环境 ID（用于 fluid 配置）
 
@@ -55,7 +55,7 @@ categories:
 - [Twikoo 部署文档](https://twikoo.js.org/quick-start.html#%E6%89%8B%E5%8A%A8%E9%83%A8%E7%BD%B2)
 - 选择基础服务-->云函数，新建云函数，按如图所示配置基础信息
 
-  ![6](6.png)
+  ![ ](6.png)
 
   - 下一步，函数配置，将函数代码替换为`exports.main = require('twikoo-func').main`
   - 创建完成后，点击“twikoo"进入云函数详情页，进入“函数代码”标签，点击“文件 - 新建文件”，输入 `package.json`，回车
@@ -99,6 +99,22 @@ twikoo:
   region: ap-shanghai
   path: window.location.pathname
 ```
+
+### 如何管理评论
+
+根据指引下载密钥，全选复制粘贴即可
+
+![ ](7.png)
+
+![ ](8.png)
+
+![ ](9.png)
+
+### 图片评论
+
+腾讯云环境自带云存储，所以腾讯云环境下可以直接上传图片，图片保存在云存储中。
+
+[腾讯云存储](https://console.cloud.tencent.com/tcb/storage/index)
 
 ### 参考
 
