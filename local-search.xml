@@ -4,31 +4,6 @@
   
   
   <entry>
-    <title>低版本Chrome浏览器兼容</title>
-    <link href="/2023/02/20/webpack-to-vite/"/>
-    <url>/2023/02/20/webpack-to-vite/</url>
-    
-    <content type="html"><![CDATA[<h3 id="问题记录"><a href="#问题记录" class="headerlink" title="问题记录"></a>问题记录</h3><p>一句话需求：解决 78 版本 Chrome 浏览器网站白屏（本地最新版本已达 110）</p><h3 id="一键转换插件webpack-to-vite"><a href="#一键转换插件webpack-to-vite" class="headerlink" title="一键转换插件webpack-to-vite"></a>一键转换插件<code>webpack-to-vite</code></h3><ul><li><p>官方文档：<a href="https://github.com/originjs/webpack-to-vite/blob/main/README-zh.md">webpack-to-vite</a></p><ul><li>打开项目父目录，打开 cmd</li><li>npx @originjs/webpack-to-vite + 项目名</li><li>打开项目重新 npm i</li><li>在 package json 文件中将 dev 启动命令改为 vite（其他命令也要改，待会说明）</li></ul></li><li><p>启动项目后解决项目报错（注意此处只记录当前项目的报错信息，详细请参阅官方文档）</p><ul><li><p>报错信息：<code>[vite] Internal server error: URI malformeds</code><br>解决：index.html 中的<code>&lt;link rel=&quot;icon&quot; href=&quot;&lt;%= BASE_URL %&gt;favicon.ico&quot; /&gt;</code>这种写法会报错，改回一般形式</p></li><li><p>包含多个别名的导入，如：<code>@import &#39;~@/styles/global.scss&#39;</code>，同时包含了别名 <code>~</code>和 <code>@</code><br>解决：添加别名配置 { find: /^~@/, replacement: path.resolve(__dirname, ‘src’) } 到 resolve.alias 配置中，并且把该项配置移到别名配置中的第一项</p></li><li><p>不支持 webpack 语法 <code>require.ensure</code><br><code>require.ensure</code>用于按需加载组件<br>语法：<code>require.ensure(dependencies: String[], callback: function([require]), [chunkName: String])</code><br>dependencies–&gt;依赖的模块数组<br>依赖的模块数组–&gt;回调函数，该函数调用时会传一个 require 参数<br>chunkName –&gt;模块名，用于构建时生成文件时命名使用</p></li></ul></li></ul>]]></content>
-    
-    
-    <categories>
-      
-      <category>浏览器</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>问题记录</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>css——持续更新遇到的问题</title>
     <link href="/2023/02/17/css%E2%80%94%E2%80%94%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/"/>
     <url>/2023/02/17/css%E2%80%94%E2%80%94%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/</url>
@@ -71,31 +46,6 @@
     <tags>
       
       <tag>http</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>2023年的一些设想</title>
-    <link href="/2023/02/16/2023%E5%B9%B4%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%BE%E6%83%B3/"/>
-    <url>/2023/02/16/2023%E5%B9%B4%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%BE%E6%83%B3/</url>
-    
-    <content type="html"><![CDATA[<h3 id="目前工作存在的问题以及解决方案"><a href="#目前工作存在的问题以及解决方案" class="headerlink" title="目前工作存在的问题以及解决方案"></a>目前工作存在的问题以及解决方案</h3><h4 id="1、不能确定自己的开发速度"><a href="#1、不能确定自己的开发速度" class="headerlink" title="1、不能确定自己的开发速度"></a>1、不能确定自己的开发速度</h4><p>直接影响就是接需求的时候没办法自信地给出预期工时</p><p>解决方案：</p><ul><li><p><mark>常规需求</mark>做好总结，提前准备好可复用代码，这部分一定可以确定工时。</p></li><li><p><mark>非常规需求</mark>结合下一点，预留至少半天排疑，过后一定要及时总结，争取把非常规需求变成常规需求。</p></li></ul><h4 id="2、经常遇到需求盲区"><a href="#2、经常遇到需求盲区" class="headerlink" title="2、经常遇到需求盲区"></a>2、经常遇到需求盲区</h4><p>这部分不是基础知识的问题，而是经验的欠缺</p><p>解决方案：</p><ul><li><p>借助搜索引擎和各大社区，要相信你接的需求一定有前人做过</p></li><li><p>上一步能解决 90%的需求盲区，剩下 10% 👇👇👇</p><img src="1.png" style="display: block; margin: auto; width: 300px; margin-bottom: 20px;"></li></ul><h3 id="2023-年的绘画学习计划"><a href="#2023-年的绘画学习计划" class="headerlink" title="2023 年的绘画学习计划"></a>2023 年的绘画学习计划</h3><p>（又名江南百景图临摹计划，按 5 张景 1 张人物的顺序安排，一周至少 3 张（一天线稿一天上色交替进行）</p><p>先坚持到 5 月底再看看</p><h3 id="2023-年的博客输出计划"><a href="#2023-年的博客输出计划" class="headerlink" title="2023 年的博客输出计划"></a>2023 年的博客输出计划</h3><p>一天一篇，周六周末不中断（假期记得带电脑回去）</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>随笔</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>flag</tag>
       
     </tags>
     
