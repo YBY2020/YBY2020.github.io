@@ -16,21 +16,22 @@
   <meta name="author" content="wumichalou">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+    <meta name="description" content="问题记录一句话需求：解决 78 版本 Chrome 浏览器网站白屏（本地最新版本已达 110） 一键转换插件webpack-to-vite 官方文档：webpack-to-vite  打开项目父目录，打开 cmd npx @originjs&#x2F;webpack-to-vite + 项目名 打开项目重新 npm i 在 package json 文件中将 dev 启动命令改为 vite（其他命令也要改，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2023/02/14/hello-world/index.html">
+<meta property="og:title" content="低版本Chrome浏览器兼容">
+<meta property="og:url" content="http://example.com/2023/02/20/webpack-to-vite/index.html">
 <meta property="og:site_name" content="yby2020">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="问题记录一句话需求：解决 78 版本 Chrome 浏览器网站白屏（本地最新版本已达 110） 一键转换插件webpack-to-vite 官方文档：webpack-to-vite  打开项目父目录，打开 cmd npx @originjs&#x2F;webpack-to-vite + 项目名 打开项目重新 npm i 在 package json 文件中将 dev 启动命令改为 vite（其他命令也要改，">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-02-14T01:39:12.558Z">
-<meta property="article:modified_time" content="2023-02-14T09:37:07.477Z">
+<meta property="article:published_time" content="2023-02-20T07:43:08.000Z">
+<meta property="article:modified_time" content="2023-02-21T06:52:32.707Z">
 <meta property="article:author" content="wumichalou">
+<meta property="article:tag" content="问题记录">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Hello World - yby2020</title>
+  <title>低版本Chrome浏览器兼容 - yby2020</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -200,7 +201,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Hello World"></span>
+            <span id="subtitle" data-typed-text="低版本Chrome浏览器兼容"></span>
           
         </div>
 
@@ -211,8 +212,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-02-14 09:39" pubdate>
-          2023年2月14日 上午
+        <time datetime="2023-02-20 15:43" pubdate>
+          2023年2月20日 下午
         </time>
       </span>
     
@@ -223,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          363 字
+          761 字
         
       </span>
     
@@ -234,7 +235,7 @@
         
         
         
-          4 分钟
+          7 分钟
         
       </span>
     
@@ -285,24 +286,32 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Hello World</h1>
+            <h1 style="display: none">低版本Chrome浏览器兼容</h1>
             
             
               <div class="markdown-body">
                 
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo server<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo generate<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo deploy<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+                <h3 id="问题记录"><a href="#问题记录" class="headerlink" title="问题记录"></a>问题记录</h3><p>一句话需求：解决 78 版本 Chrome 浏览器网站白屏（本地最新版本已达 110）</p>
+<h3 id="一键转换插件webpack-to-vite"><a href="#一键转换插件webpack-to-vite" class="headerlink" title="一键转换插件webpack-to-vite"></a>一键转换插件<code>webpack-to-vite</code></h3><ul>
+<li><p>官方文档：<a target="_blank" rel="noopener" href="https://github.com/originjs/webpack-to-vite/blob/main/README-zh.md">webpack-to-vite</a></p>
+<ul>
+<li>打开项目父目录，打开 cmd</li>
+<li>npx @originjs/webpack-to-vite + 项目名</li>
+<li>打开项目重新 npm i</li>
+<li>在 package json 文件中将 dev 启动命令改为 vite（其他命令也要改，待会说明）</li>
+</ul>
+</li>
+<li><p>启动项目后解决项目报错（注意此处只记录当前项目的报错信息，详细请参阅官方文档）</p>
+<ul>
+<li><p>报错信息：<code>[vite] Internal server error: URI malformeds</code><br>解决：index.html 中的<code>&lt;link rel=&quot;icon&quot; href=&quot;&lt;%= BASE_URL %&gt;favicon.ico&quot; /&gt;</code>这种写法会报错，改回一般形式</p>
+</li>
+<li><p>包含多个别名的导入，如：<code>@import &#39;~@/styles/global.scss&#39;</code>，同时包含了别名 <code>~</code>和 <code>@</code><br>解决：添加别名配置 { find: /^~@/, replacement: path.resolve(__dirname, ‘src’) } 到 resolve.alias 配置中，并且把该项配置移到别名配置中的第一项</p>
+</li>
+<li><p>不支持 webpack 语法 <code>require.ensure</code><br><code>require.ensure</code>用于按需加载组件<br>语法：<code>require.ensure(dependencies: String[], callback: function([require]), [chunkName: String])</code><br>dependencies–&gt;依赖的模块数组<br>依赖的模块数组–&gt;回调函数，该函数调用时会传一个 require 参数<br>chunkName –&gt;模块名，用于构建时生成文件时命名使用</p>
+</li>
+</ul>
+</li>
+</ul>
 
                 
               </div>
@@ -311,6 +320,34 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%B5%8F%E8%A7%88%E5%99%A8/" class="category-chain-item">浏览器</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/">#问题记录</a>
+      
+    </div>
   
 </div>
 
@@ -322,15 +359,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/02/14/%E4%BB%8E0%E5%88%B01%E5%85%A8%E6%B5%81%E7%A8%8B/" title="建站——从0到1全流程">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">建站——从0到1全流程</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2023/02/17/css%E2%80%94%E2%80%94%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" title="css——持续更新遇到的问题">
+                        <span class="hidden-mobile">css——持续更新遇到的问题</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
