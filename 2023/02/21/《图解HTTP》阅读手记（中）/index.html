@@ -30,8 +30,9 @@
 <meta property="og:image" content="http://example.com/2023/02/21/%E3%80%8A%E5%9B%BE%E8%A7%A3HTTP%E3%80%8B%E9%98%85%E8%AF%BB%E6%89%8B%E8%AE%B0%EF%BC%88%E4%B8%AD%EF%BC%89/5.png">
 <meta property="og:image" content="http://example.com/2023/02/21/%E3%80%8A%E5%9B%BE%E8%A7%A3HTTP%E3%80%8B%E9%98%85%E8%AF%BB%E6%89%8B%E8%AE%B0%EF%BC%88%E4%B8%AD%EF%BC%89/6.png">
 <meta property="og:image" content="http://example.com/2023/02/21/%E3%80%8A%E5%9B%BE%E8%A7%A3HTTP%E3%80%8B%E9%98%85%E8%AF%BB%E6%89%8B%E8%AE%B0%EF%BC%88%E4%B8%AD%EF%BC%89/7.png">
+<meta property="og:image" content="http://example.com/2023/02/21/%E3%80%8A%E5%9B%BE%E8%A7%A3HTTP%E3%80%8B%E9%98%85%E8%AF%BB%E6%89%8B%E8%AE%B0%EF%BC%88%E4%B8%AD%EF%BC%89/8.png">
 <meta property="article:published_time" content="2023-02-21T07:52:24.000Z">
-<meta property="article:modified_time" content="2023-02-21T09:31:31.007Z">
+<meta property="article:modified_time" content="2023-02-21T10:55:03.961Z">
 <meta property="article:author" content="wumichalou">
 <meta property="article:tag" content="http">
 <meta name="twitter:card" content="summary_large_image">
@@ -232,7 +233,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          604 字
+          1.6k 字
         
       </span>
     
@@ -243,7 +244,7 @@
         
         
         
-          6 分钟
+          14 分钟
         
       </span>
     
@@ -326,10 +327,50 @@
 <li>Connection: keep-alive：持久连接节省通信量</li>
 </ul>
 <p><img src="6.png" srcset="/img/loading.gif" lazyload alt=" "></p>
-<h3 id="二、报文首部（响应报文）"><a href="#二、报文首部（响应报文）" class="headerlink" title="二、报文首部（响应报文）"></a>二、报文首部（响应报文）</h3><h4 id="1-状态行"><a href="#1-状态行" class="headerlink" title="1.状态行"></a>1.状态行</h4><p>包含表明<mark>响应结果的状态码</mark>，<mark>原因短语</mark>和 <mark>HTTP 版本</mark>。</p>
+<h3 id="二、报文首部（响应报文）"><a href="#二、报文首部（响应报文）" class="headerlink" title="二、报文首部（响应报文）"></a>二、报文首部（响应报文）</h3><h4 id="1-状态行"><a href="#1-状态行" class="headerlink" title="1.状态行"></a>1.状态行</h4><p>包含表明<mark>响应结果的状态码</mark>和 <mark>HTTP 版本</mark>。</p>
 <p><img src="7.png" srcset="/img/loading.gif" lazyload alt=" "></p>
 <ul>
-<li>状态码<br>状态码告知从服务器端返回的请求结果</li>
+<li><p>状态码<br>状态码告知从服务器端返回的请求结果，借助状态码，用户可以知道服务器端是正常处理了请求，还是出现了错误。<br>状态码如 200 OK，以 3 位数字和原因短语组成。</p>
+<p><img src="8.png" srcset="/img/loading.gif" lazyload alt=" "></p>
+<ul>
+<li><p>2XX 成功<br>2XX 的响应结果表明请求被正常处理了。</p>
+<ul>
+<li>200 OK<br>表示从客户端发来的请求在服务器端被正常处理了。</li>
+<li>204 No Content<br>请求处理成功，但没有资源可返回（一般在只需要从客户端往服务器发送信息，而对客户端不需要发送新信息内容的情况下使用。是主动的，不是错误）</li>
+<li>206 Partial Content<br>表示客户端进行了范围请求，而服务器成功执行了这部分 GET 请求</li>
+</ul>
+</li>
+<li><p>3XX 重定向<br>3XX 响应结果表明浏览器需要执行某些特殊的处理以正确处理请求。</p>
+<ul>
+<li>301 Moved Permanently<br>永久性重定向。该状态码表示请求的资源已被分配了新的 URI，以后应使用资源现在所指的 URI。</li>
+<li>302 Found<br>临时性重定向。该状态码表示请求的资源已被分配了新的 URI，希望用户（本次）能使用新的 URI 访问。（服务器姑且算你已经知道这个情况了，还是会返回正确的内容过来）</li>
+<li>303 See Other<br>该状态码表示由于请求对应的资源存在着另一个 URI，应使用 GET 方法定向获取请求的资源。</li>
+<li>304 Not Modified</li>
+<li>307 Temporary Redirect</li>
+</ul>
+</li>
+<li><p>4XX 客户端错误<br>4XX 的响应结果表明客户端是发生错误的原因所在。</p>
+<ul>
+<li><p>400 Bad Request<br>该状态码表示请求报文中存在语法错误。当错误发生时，需修改请求的内容后再次发送请求。另外，<mark>浏览器会像 200 OK 一样对待该状态码</mark>。</p>
+</li>
+<li><p>401 Unauthorized<br>该状态码表示发送的请求需要有通过 HTTP 认证（BASIC 认证、DIGEST 认证）的认证信息。另外若之前已进行过 1 次请求，则表示用户认证失败。（当浏览器初次接收到 401 响应，会弹出认证用的对话窗口。）</p>
+</li>
+<li><p>403 Forbidden<br>该状态码表明对请求资源的访问被服务器拒绝了。（一般是权限问题）</p>
+</li>
+<li><p>404 Not Found<br>该状态码表明服务器上无法找到请求的资源。<mark>除此之外，也可以在服务器端拒绝请求且不想说明理由时使用</mark>。</p>
+</li>
+</ul>
+</li>
+<li><p>5XX 服务器错误<br>5XX 的响应结果表明服务器本身发生错误。</p>
+<ul>
+<li><p>500 Internal Server Error<br>该状态码表明服务器端在执行请求时发生了错误。<mark>也有可能是 Web 应用存在的 bug 或某些临时的故障</mark>。</p>
+</li>
+<li><p>503 Service Unavailable<br>该状态码表明服务器暂时处于超负载或正在进行停机维护，现在无法处理请求。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
                 
@@ -378,12 +419,18 @@
                   <article class="post-prev col-6">
                     
                     
+                      <a href="/2023/02/22/%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%E4%B9%8B%E5%BC%95%E8%8D%90%E6%9D%A5%E6%BA%90%E7%BD%91%E5%9D%80%E6%94%BF%E7%AD%96/" title="开发者工具之引荐来源网址政策">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">开发者工具之引荐来源网址政策</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/02/17/css%E2%80%94%E2%80%94%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" title="css——持续更新遇到的问题">
-                        <span class="hidden-mobile">css——持续更新遇到的问题</span>
+                      <a href="/2023/02/17/css%E2%80%94%E2%80%94%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" title="css布局 —— text-align:center 失效">
+                        <span class="hidden-mobile">css布局 —— text-align:center 失效</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

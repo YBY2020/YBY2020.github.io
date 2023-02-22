@@ -16,30 +16,25 @@
   <meta name="author" content="wumichalou">
   <meta name="keywords" content="">
   
-    <meta name="description" content="第一章 了解 Web 及网络基础1、HTTP（HyperText Transfer Protocol，超文本传输协议）1.1 为了理解 HTTP，我们有必要事先了解一下 TCP&#x2F;IP 协议族 计算机与网络设备要相互通信，双方就必须基于相同的方法。比如，如何探测到通信目标、由哪一边先发起通信、使用哪种语言进行通信、怎样结束通信等规则都需要事先确定。不同的硬件、操作系统之间的通信，所有的这一切">
+    <meta name="description" content="需求：原本的图片列表只能查看，现在需要增加删除功能（附带全选本页） 选中样式预览    原容器样式  12345.item &amp;#123;  width: 350px;  height: 200px;  overflow: hidden;&amp;#125;   选中容器添加 css 样式  1234567891011121314151617181920212223242526272829.selected">
 <meta property="og:type" content="article">
-<meta property="og:title" content="《图解HTTP》阅读手记（上）">
-<meta property="og:url" content="http://example.com/2023/02/17/%E3%80%8A%E5%9B%BE%E8%A7%A3HTTP%E3%80%8B%E9%98%85%E8%AF%BB%E6%89%8B%E8%AE%B0%EF%BC%88%E4%B8%8A%EF%BC%89/index.html">
+<meta property="og:title" content="css+js实现图片选中">
+<meta property="og:url" content="http://example.com/2023/02/22/css-js%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E9%80%89%E4%B8%AD/index.html">
 <meta property="og:site_name" content="yby2020">
-<meta property="og:description" content="第一章 了解 Web 及网络基础1、HTTP（HyperText Transfer Protocol，超文本传输协议）1.1 为了理解 HTTP，我们有必要事先了解一下 TCP&#x2F;IP 协议族 计算机与网络设备要相互通信，双方就必须基于相同的方法。比如，如何探测到通信目标、由哪一边先发起通信、使用哪种语言进行通信、怎样结束通信等规则都需要事先确定。不同的硬件、操作系统之间的通信，所有的这一切">
+<meta property="og:description" content="需求：原本的图片列表只能查看，现在需要增加删除功能（附带全选本页） 选中样式预览    原容器样式  12345.item &amp;#123;  width: 350px;  height: 200px;  overflow: hidden;&amp;#125;   选中容器添加 css 样式  1234567891011121314151617181920212223242526272829.selected">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/2023/02/17/%E3%80%8A%E5%9B%BE%E8%A7%A3HTTP%E3%80%8B%E9%98%85%E8%AF%BB%E6%89%8B%E8%AE%B0%EF%BC%88%E4%B8%8A%EF%BC%89/1.png">
-<meta property="og:image" content="http://example.com/2023/02/17/%E3%80%8A%E5%9B%BE%E8%A7%A3HTTP%E3%80%8B%E9%98%85%E8%AF%BB%E6%89%8B%E8%AE%B0%EF%BC%88%E4%B8%8A%EF%BC%89/2.png">
-<meta property="og:image" content="http://example.com/2023/02/17/%E3%80%8A%E5%9B%BE%E8%A7%A3HTTP%E3%80%8B%E9%98%85%E8%AF%BB%E6%89%8B%E8%AE%B0%EF%BC%88%E4%B8%8A%EF%BC%89/3.png">
-<meta property="og:image" content="http://example.com/2023/02/17/%E3%80%8A%E5%9B%BE%E8%A7%A3HTTP%E3%80%8B%E9%98%85%E8%AF%BB%E6%89%8B%E8%AE%B0%EF%BC%88%E4%B8%8A%EF%BC%89/4.png">
-<meta property="og:image" content="http://example.com/2023/02/17/%E3%80%8A%E5%9B%BE%E8%A7%A3HTTP%E3%80%8B%E9%98%85%E8%AF%BB%E6%89%8B%E8%AE%B0%EF%BC%88%E4%B8%8A%EF%BC%89/6.png">
-<meta property="og:image" content="http://example.com/2023/02/17/%E3%80%8A%E5%9B%BE%E8%A7%A3HTTP%E3%80%8B%E9%98%85%E8%AF%BB%E6%89%8B%E8%AE%B0%EF%BC%88%E4%B8%8A%EF%BC%89/5.png">
-<meta property="og:image" content="http://example.com/2023/02/17/%E3%80%8A%E5%9B%BE%E8%A7%A3HTTP%E3%80%8B%E9%98%85%E8%AF%BB%E6%89%8B%E8%AE%B0%EF%BC%88%E4%B8%8A%EF%BC%89/8.png">
-<meta property="article:published_time" content="2023-02-17T01:24:18.000Z">
-<meta property="article:modified_time" content="2023-02-21T07:58:02.576Z">
+<meta property="og:image" content="http://example.com/2023/02/22/css-js%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E9%80%89%E4%B8%AD/1.png">
+<meta property="og:image" content="http://example.com/2023/02/22/css-js%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E9%80%89%E4%B8%AD/2.png">
+<meta property="article:published_time" content="2023-02-22T09:31:13.000Z">
+<meta property="article:modified_time" content="2023-02-22T10:06:59.551Z">
 <meta property="article:author" content="wumichalou">
-<meta property="article:tag" content="http">
+<meta property="article:tag" content="需求记录">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/2023/02/17/%E3%80%8A%E5%9B%BE%E8%A7%A3HTTP%E3%80%8B%E9%98%85%E8%AF%BB%E6%89%8B%E8%AE%B0%EF%BC%88%E4%B8%8A%EF%BC%89/1.png">
+<meta name="twitter:image" content="http://example.com/2023/02/22/css-js%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E9%80%89%E4%B8%AD/1.png">
   
   
   
-  <title>《图解HTTP》阅读手记（上） - yby2020</title>
+  <title>css+js实现图片选中 - yby2020</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -209,7 +204,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="《图解HTTP》阅读手记（上）"></span>
+            <span id="subtitle" data-typed-text="css+js实现图片选中"></span>
           
         </div>
 
@@ -220,8 +215,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-02-17 09:24" pubdate>
-          2023年2月17日 上午
+        <time datetime="2023-02-22 17:31" pubdate>
+          2023年2月22日 下午
         </time>
       </span>
     
@@ -232,7 +227,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.6k 字
+          1.9k 字
         
       </span>
     
@@ -243,7 +238,7 @@
         
         
         
-          14 分钟
+          16 分钟
         
       </span>
     
@@ -294,80 +289,49 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">《图解HTTP》阅读手记（上）</h1>
+            <h1 style="display: none">css+js实现图片选中</h1>
             
             
               <div class="markdown-body">
                 
-                <!-- align-center无效的都可以用p标签包裹起来，根本原因就是没有一个撑满宽度的容器，而p标签默认宽度撑满容器 -->
+                <h4 id="需求：原本的图片列表只能查看，现在需要增加删除功能（附带全选本页）"><a href="#需求：原本的图片列表只能查看，现在需要增加删除功能（附带全选本页）" class="headerlink" title="需求：原本的图片列表只能查看，现在需要增加删除功能（附带全选本页）"></a>需求：原本的图片列表只能查看，现在需要增加删除功能（附带全选本页）</h4><ul>
+<li>选中样式预览</li>
+</ul>
+<p><img src="1.png" srcset="/img/loading.gif" lazyload alt=" "></p>
+<ul>
+<li>原容器样式</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.item</span> &#123;<br>  <span class="hljs-attribute">width</span>: <span class="hljs-number">350px</span>;<br>  <span class="hljs-attribute">height</span>: <span class="hljs-number">200px</span>;<br>  <span class="hljs-attribute">overflow</span>: hidden;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<img src="1.png" srcset="/img/loading.gif" lazyload style="display: block; margin: auto; width: 200px; margin-bottom: 20px;">
+<ul>
+<li>选中容器添加 css 样式</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.selected</span> &#123;<br>  <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0px</span> <span class="hljs-number">2px</span> <span class="hljs-number">7px</span> <span class="hljs-number">0px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">85</span>, <span class="hljs-number">110</span>, <span class="hljs-number">97</span>, <span class="hljs-number">0.35</span>);<br>  <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#00aaff</span>;<br>  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#00aaff</span>; //填充图片与容器之间出现的白色空隙<br>  <span class="hljs-attribute">position</span>: relative;<br>&#125;<br><br><span class="hljs-selector-class">.selected</span><span class="hljs-selector-pseudo">:before</span> &#123;<br>  <span class="hljs-attribute">position</span>: absolute;<br>  <span class="hljs-attribute">content</span>: <span class="hljs-string">&quot;&quot;</span>;<br>  <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;<br>  <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;<br>  <span class="hljs-attribute">border</span>: <span class="hljs-number">10px</span> solid <span class="hljs-number">#00aaff</span>;<br>  <span class="hljs-attribute">border-top-color</span>: transparent;<br>  <span class="hljs-attribute">border-left-color</span>: transparent;<br>&#125;<br><br><span class="hljs-selector-class">.selected</span><span class="hljs-selector-pseudo">:after</span> &#123;<br>  <span class="hljs-attribute">content</span>: <span class="hljs-string">&quot;&quot;</span>;<br>  <span class="hljs-attribute">position</span>: absolute;<br>  <span class="hljs-attribute">width</span>: <span class="hljs-number">4px</span>;<br>  <span class="hljs-attribute">height</span>: <span class="hljs-number">6px</span>;<br>  <span class="hljs-attribute">right</span>: <span class="hljs-number">4px</span>;<br>  <span class="hljs-attribute">bottom</span>: <span class="hljs-number">3px</span>;<br>  <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> solid <span class="hljs-number">#fff</span>;<br>  <span class="hljs-attribute">border-top-color</span>: transparent;<br>  <span class="hljs-attribute">border-left-color</span>: transparent;<br>  <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(<span class="hljs-number">45deg</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<h3 id="第一章-了解-Web-及网络基础"><a href="#第一章-了解-Web-及网络基础" class="headerlink" title="第一章 了解 Web 及网络基础"></a>第一章 了解 Web 及网络基础</h3><h3 id="1、HTTP（HyperText-Transfer-Protocol，超文本传输协议）"><a href="#1、HTTP（HyperText-Transfer-Protocol，超文本传输协议）" class="headerlink" title="1、HTTP（HyperText Transfer Protocol，超文本传输协议）"></a>1、HTTP（HyperText Transfer Protocol，超文本传输协议）</h3><h4 id="1-1-为了理解-HTTP，我们有必要事先了解一下-TCP-IP-协议族"><a href="#1-1-为了理解-HTTP，我们有必要事先了解一下-TCP-IP-协议族" class="headerlink" title="1.1 为了理解 HTTP，我们有必要事先了解一下 TCP/IP 协议族"></a>1.1 为了理解 HTTP，我们有必要事先了解一下 TCP/IP 协议族</h4><ul>
-<li><p>计算机与网络设备要相互通信，双方就必须基于相同的方法。比如，如何探测到通信目标、由哪一边先发起通信、使用哪种语言进行通信、怎样结束通信等规则都需要事先确定。不同的硬件、操作系统之间的通信，所有的这一切都需要一种规则。<mark>而我们就把这种规则称为协议（protocol）。</mark></p>
-<p><img src="2.png" srcset="/img/loading.gif" lazyload alt="TCP/IP 是互联网相关的各类协议族的总称"></p>
-</li>
-<li><p><mark>TCP/IP 协议族里重要的一点就是分层。</mark>TCP/IP 协议族按层次分别分为以下 4 层：应用层、传输层、网络层和数据链路层。（每个底层都是为上层提供服务）</p>
-<p><img src="3.png" srcset="/img/loading.gif" lazyload alt="这种把数据信息包装起来的做法称为封装（encapsulate）"></p>
-</li>
-</ul>
-<h4 id="1-2-各种协议的职责"><a href="#1-2-各种协议的职责" class="headerlink" title="1.2 各种协议的职责"></a>1.2 各种协议的职责</h4><ul>
-<li>HTTP 协议：生成针对目标 Web 服务器的<mark> HTTP 请求报文</mark>（反过来–&gt;对 Web 服务器请求的内容进行处理）</li>
-<li>TCP 协议：为了方便通信，将 HTTP 请求报文分割成报文段（反过来–&gt;重组从对方那里接收的报文段，即按序号以原来的顺序重组请求报文）</li>
-<li>IP 协议：搜索对方的地址，一边中转一边传送</li>
-</ul>
-<h3 id="2、一个经典八股文问题"><a href="#2、一个经典八股文问题" class="headerlink" title="2、一个经典八股文问题"></a>2、一个经典八股文问题</h3><ul>
-<li><p>当我们在网页浏览器（Web browser）的地址栏中输入 URL 时，Web 页面是如何呈现的？（一个数据包在网络中的心路历程）</p>
-</li>
-<li><p>答：用户在浏览器中输入 url 地址，浏览器首先是<mark>解析 URL，生成 HTTP 请求报文</mark>），同时<mark>解析域名得到服务器 ip 地址</mark>）（这里是先从缓存中找是否存在域名，存在就直接取 IP 地址，不存在就借助 <mark>DNS</mark>） 进行查询），然后是 <mark>TCP 三次握手</mark>）建立客户端和服务器的连接，再依次通过网络层和链路层，<mark>发送 HTTP 请求</mark>）获取服务器端的静态资源，服务器处理请求反过来<mark>发送 HTTP 响应报文</mark>）给客户端，客户端获取到页面静态资源，<mark>解析渲染页面</mark>），最后 <mark>TCP 四次挥手</mark>）关闭客户端和服务器的连接。</p>
 <ul>
-<li><p>浏览器做的第一步工作是解析 URL</p>
-<p><img src="4.png" srcset="/img/loading.gif" lazyload alt=" "></p>
-</li>
-<li><p>对 URL 进行解析之后，浏览器确定了 Web 服务器和文件名，接下来就是根据这些信息来生成 HTTP 请求报文了。</p>
-<p><img src="6.png" srcset="/img/loading.gif" lazyload alt=" "></p>
-</li>
-<li><p>通过浏览器解析 URL 并生成 HTTP 消息后，需要委托操作系统将消息发送给 Web 服务器。（发送之前，需要通过 DNS 查询域名对应的 IP）</p>
-</li>
+<li>html 结构</li>
 </ul>
-<p><img src="5.png" srcset="/img/loading.gif" lazyload alt="DNS 域名解析的过程"></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- 注意选中样式不能直接加给图片，因为::before和::after对img标签无效，所以在此包裹一层div容器 --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">div</span></span><br><span class="hljs-tag">  @<span class="hljs-attr">click</span>=<span class="hljs-string">&quot;selectImg(item.id)&quot;</span></span><br><span class="hljs-tag">  <span class="hljs-attr">v-bind:class</span>=<span class="hljs-string">&quot;&#123; selected: selectedList.includes(item.id) &#125;&quot;</span></span><br><span class="hljs-tag">  <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;item&quot;</span></span><br><span class="hljs-tag">&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">:src</span>=<span class="hljs-string">&quot;item.link&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 100%&quot;</span> /&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
 <ul>
-<li><p>可靠传输 —— TCP</p>
+<li>js 部分</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> selectedList = <span class="hljs-title function_">ref</span>([]); <span class="hljs-comment">//被选中的图片id数组【动态样式所用的数据必须是双向绑定数据，否则不生效】</span><br><br><span class="hljs-keyword">const</span> <span class="hljs-title function_">selectImg</span> = (<span class="hljs-params">id</span>) =&gt; &#123;<br>  <span class="hljs-comment">// 若之前就选中则取消选中</span><br>  <span class="hljs-keyword">if</span> (selectedList.<span class="hljs-property">value</span>.<span class="hljs-title function_">includes</span>(id)) &#123;<br>    <span class="hljs-comment">// 删除数组中指定元素</span><br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i <span class="hljs-keyword">in</span> selectedList.<span class="hljs-property">value</span>) &#123;<br>      <span class="hljs-keyword">if</span> (selectedList.<span class="hljs-property">value</span>[i] === id) &#123;<br>        selectedList.<span class="hljs-property">value</span>.<span class="hljs-title function_">splice</span>(i, <span class="hljs-number">1</span>);<br>      &#125;<br>    &#125;<br>  &#125;<br>  <span class="hljs-comment">//  反之则选中</span><br>  <span class="hljs-keyword">else</span> &#123;<br>    selectedList.<span class="hljs-property">value</span>.<span class="hljs-title function_">push</span>(id);<br>  &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
+
+<h3 id="实现全选"><a href="#实现全选" class="headerlink" title="实现全选"></a>实现全选</h3><p><img src="2.png" srcset="/img/loading.gif" lazyload alt=" "></p>
 <ul>
-<li>TCP 传输数据之前，要先三次握手建立连接（<mark>三次握手目的是保证双方都有发送和接收的能力，且有效避免历史连接</mark>）</li>
-<li>如果 HTTP 请求消息比较长，超过了 MSS 的长度（可以了解下 TCP 报文），这时 TCP 就需要把 HTTP 的数据拆解一块块的数据发送，而不是一次性发送所有数据。</li>
-<li>这个所谓的「连接」，只是双方计算机里维护一个状态机，在连接建立的过程中，双方的状态变化时序图就像这样</li>
+<li>依然是 css+js</li>
 </ul>
-</li>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span><br>  全选本页图片: <span class="hljs-tag">&lt;<span class="hljs-name">a-checkbox</span> <span class="hljs-attr">v-model:checked</span>=<span class="hljs-string">&quot;checked&quot;</span> @<span class="hljs-attr">change</span>=<span class="hljs-string">&quot;selectAll&quot;</span> /&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">let</span> checked = <span class="hljs-title function_">ref</span>(<span class="hljs-literal">false</span>);<br><br><span class="hljs-keyword">const</span> <span class="hljs-title function_">selectAll</span> = (<span class="hljs-params"></span>) =&gt; &#123;<br>  <span class="hljs-keyword">if</span> (!checked.<span class="hljs-property">value</span>) &#123;<br>    selectedList.<span class="hljs-property">value</span> = [];<br>  &#125; <span class="hljs-keyword">else</span> &#123;<br>    <span class="hljs-comment">// 直接从后端返回的本页全部数据data中取用</span><br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i <span class="hljs-keyword">in</span> data) &#123;<br>      selectedList.<span class="hljs-property">value</span>.<span class="hljs-title function_">push</span>(data[i].<span class="hljs-property">id</span>);<br>    &#125;<br>  &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
+
+<h4 id="其它注意点"><a href="#其它注意点" class="headerlink" title="其它注意点"></a>其它注意点</h4><ul>
+<li>点击删除按钮时需要做一个确认对话框，防止误操作</li>
+<li>未选中图片时，删除按钮应处于禁用状态</li>
+<li>参数传给后端时，数组需要使用 toRaw()去掉外层 proxy 对象</li>
+<li>项目中点击图片有预览效果，非常干扰选中，可以添加样式<code>img &#123;pointer-events: none;&#125;</code>避免图片被点击后放大</li>
 </ul>
-<p><img src="8.png" srcset="/img/loading.gif" lazyload alt=" "></p>
-<ul>
-<li><p>TCP 模块在执行连接、收发、断开等各阶段操作时，都需要委托 IP 模块将数据封装成网络包发送给通信对象。</p>
-<p>关于 IP：当你的电脑连入互联网后，电脑将会获得一个编号地址，也就是 IP 地址，同理打个比方，bilibili 的服务器接入互联网，也将分配一个 IP 地址，（我们常说的访问某个网站，其实就是在访问这个网站的服务器）</p>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="3、HTML（（HyperText-Markup-Language，超文本标记语言）"><a href="#3、HTML（（HyperText-Markup-Language，超文本标记语言）" class="headerlink" title="3、HTML（（HyperText Markup Language，超文本标记语言）"></a>3、HTML（（HyperText Markup Language，超文本标记语言）</h3><ul>
-<li><p>超文本是一种文档系统，可将文档中任意位置的信息与其他信息（文本或图片等）建立关联，即超链接文本。</p>
-</li>
-<li><p>标记语言是指通过在文档的某部分穿插特别的字符串标签，用来修饰文档的语言。</p>
-</li>
-<li><p>由 HTML 构成的文档经过浏览器的解析、渲染后，呈现出来的结果就是 Web 页面。</p>
-</li>
-<li><p>HTML5 标准不仅解决了浏览器之间的兼容性问题，并且可把文本作为数据对待，更容易复用，动画等效果也变得更生动。</p>
-</li>
-<li><p>拓展</p>
-<ul>
-<li>CSS 的理念就是让文档的结构和设计分离，达到解耦的目的。</li>
-<li>动态 HTML 技术是通过调用客户端脚本语言 JavaScript，实现对 HTML 的 Web 页面的动态改造。</li>
-<li>DOM 是用以操作 HTML 文档和 XML 文档的 API（Application Programming Interface，应用编程接口）。</li>
-</ul>
-</li>
-</ul>
-<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><blockquote>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_34827674/article/details/104909394">当键入网址后，到网页显示，其间发生了什么？</a></p>
-</blockquote>
 
                 
               </div>
@@ -386,7 +350,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="category-chain-item">计算机网络</a>
+  <a href="/categories/css/" class="category-chain-item">css</a>
   
   
 
@@ -401,7 +365,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/http/">#http</a>
+        <a href="/tags/%E9%9C%80%E6%B1%82%E8%AE%B0%E5%BD%95/">#需求记录</a>
       
     </div>
   
@@ -415,18 +379,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/02/17/css%E2%80%94%E2%80%94%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" title="css布局 —— text-align:center 失效">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">css布局 —— text-align:center 失效</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/02/16/%E6%B7%BB%E5%8A%A0Twikoo%E8%AF%84%E8%AE%BA%E6%8F%92%E4%BB%B6/" title="添加Twikoo评论插件">
-                        <span class="hidden-mobile">添加Twikoo评论插件</span>
+                      <a href="/2023/02/22/css%E8%AF%AD%E6%B3%95-%E4%BC%AA%E5%85%83%E7%B4%A0%E5%A4%B1%E6%95%88/" title="css语法-伪元素失效">
+                        <span class="hidden-mobile">css语法-伪元素失效</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
