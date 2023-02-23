@@ -16,15 +16,15 @@
   <meta name="author" content="wumichalou">
   <meta name="keywords" content="">
   
-    <meta name="description" content="个人博客">
+    <meta name="description" content="思路将页码状态存进 pinia，每次回来页面的时候，通过 onmounted 释放数据，判断不需要存状态的路由，比如页面切走时，就将 pinia 里的数据清空这样做的好处是，每次刷新能保留当下的状态，而且比 keep-alive 更灵活，能够去掉不必要的状态保留">
 <meta property="og:type" content="article">
 <meta property="og:title" content="常规需求记录——列表元素跳转时保留当前的页码等状态">
 <meta property="og:url" content="http://example.com/2023/02/22/%E5%B8%B8%E8%A7%84%E9%9C%80%E6%B1%82%E8%AE%B0%E5%BD%95%E2%80%94%E2%80%94%E5%88%97%E8%A1%A8%E5%85%83%E7%B4%A0%E8%B7%B3%E8%BD%AC%E6%97%B6%E4%BF%9D%E7%95%99%E5%BD%93%E5%89%8D%E7%9A%84%E9%A1%B5%E7%A0%81%E7%AD%89%E7%8A%B6%E6%80%81/index.html">
 <meta property="og:site_name" content="yby2020">
-<meta property="og:description" content="个人博客">
+<meta property="og:description" content="思路将页码状态存进 pinia，每次回来页面的时候，通过 onmounted 释放数据，判断不需要存状态的路由，比如页面切走时，就将 pinia 里的数据清空这样做的好处是，每次刷新能保留当下的状态，而且比 keep-alive 更灵活，能够去掉不必要的状态保留">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-02-22T10:13:32.000Z">
-<meta property="article:modified_time" content="2023-02-22T10:14:03.603Z">
+<meta property="article:modified_time" content="2023-02-23T03:28:26.806Z">
 <meta property="article:author" content="wumichalou">
 <meta property="article:tag" content="需求记录">
 <meta name="twitter:card" content="summary_large_image">
@@ -224,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          0 字
+          124 字
         
       </span>
     
@@ -235,7 +235,7 @@
         
         
         
-          1 分钟
+          2 分钟
         
       </span>
     
@@ -291,7 +291,8 @@
             
               <div class="markdown-body">
                 
-                
+                <h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>将页码状态存进 pinia，每次回来页面的时候，通过 onmounted 释放数据，判断不需要存状态的路由，比如页面切走时，就将 pinia 里的数据清空<br>这样做的好处是，每次刷新能保留当下的状态，而且比 keep-alive 更灵活，能够去掉不必要的状态保留</p>
+
                 
               </div>
             
